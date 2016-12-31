@@ -1,0 +1,8 @@
+<script src="ether.min.js"></script>
+<script>
+window.onerror = function(error) {
+    alert(error);
+};
+var keys = Ether.generateKeys();
+document.write(JSON.stringify(keys));
+</script>

@@ -1,0 +1,6 @@
+rm -rf browserfied
+mkdir browserfied
+mkdir browserfied/bin
+browserify index.js -o browserfied/ether.js
+babelfy browserfied
+uglifyjs browserfied/bin/ether.js -o ether.min.js --mangle --compress
