@@ -4,5 +4,13 @@ window.onerror = function(error) {
     alert(error);
 };
 var keys = Ether.generateKeys();
-document.write(JSON.stringify(keys));
+
+var signedTx = Ether.signTransaction(keys.private, Ether.generateTx(
+	"0x29aa16154a6829a7f22f950d1edb0659d105ccbe",    //to address
+	420000000,										 //value in wei
+	42,												 //nonce
+	41000000000,									 //gasPrice
+	53000											 //gasLimit
+	));
+document.write(JSON.stringify(keys)+"<br>tx: "+signedTx);
 </script>
