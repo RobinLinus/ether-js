@@ -13,5 +13,12 @@ var signedTx = Ether.signTransaction(keys.private, Ether.generateTx(
 		53000											 //gasLimit
 	)
 );
-document.write(JSON.stringify(keys)+"<br>transaction: "+signedTx);
+
+var example = "<style>body{text-align:center;padding-top:24px;font-family:sans-serif;background:#efefef;}span{word-break: break-all; max-width:334px;padding:16px;display:inline-block}</style>" +
+			  "<h1>ether-js demo</h1>" +
+			  "<span><b>private key:</b><br> "+keys.private+"</span><br>" +
+   			  "<span><b>public key: </b><br>"+keys.public+"</span><br>" +
+   			  "<span><b>signed transaction:</b><br> "+signedTx+"</span><br>";
+
+document.write(example);
 </script>

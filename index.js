@@ -5,7 +5,6 @@ window.Ether=(function(){
 	privateToAddress=require("ethereumjs-util").privateToAddress;
 
 
-
 	function generateKeys(){
 		var privateKey = crypto.getRandomValues(new Uint8Array(32));
 		privateKey = new Buffer(privateKey);
